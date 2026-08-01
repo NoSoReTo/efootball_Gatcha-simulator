@@ -168,21 +168,22 @@ function createBox(type) {
       if (type === "bigshow150") {
         maxBox = 150;
 
-        addPlayer(
-        "フヴィチャ クヴァラツヘリア",
+        　　　　addPlayer(
+        "キリアン エムバペ",
         "BigTime",
-        "https://files.catbox.moe/efurg6.gif");
+        "https://files.catbox.moe/va6tv9.gif");
+
 
         addPlayer(
-        "ヴィティーニャ",
+        "エンソ フェルナンデス",
         "ShowTime",
-        "https://files.catbox.moe/d08c00.gif");
+        "https://files.catbox.moe/n9i18i.gif");
+
 
         addPlayer(
-        "ダビド ラヤ",
+        "ヨハン マンザンビ",
         "ShowTime",
-        "https://files.catbox.moe/0tk9af.gif" //  
-        );
+        "https://files.catbox.moe/0ezeck.gif");
 
 
 
@@ -193,11 +194,13 @@ function createBox(type) {
         "Victory Drivers 2026";
         bannerImages = [
 
-        "https://files.catbox.moe/efurg6.gif",
+         "https://files.catbox.moe/va6tv9.gif",
 
-        "https://files.catbox.moe/d08c00.gif",
+"https://files.catbox.moe/n9i18i.gif",
 
-        "https://files.catbox.moe/0tk9af.gif"];
+"https://files.catbox.moe/0ezeck.gif"
+
+];
 
 
 
