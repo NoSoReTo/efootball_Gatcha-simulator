@@ -1,1 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>eFootball Gatcha ver.0.4.0</title>
+    <link rel="stylesheet" href="./style.css">
+　　<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+    
+  <body>
+  <div class="container">
+  
+  <div id="gachaBanner">
+
+  <div id="bannerTop">
+
+    <div>
+
+      <div id="bannerType">
+        Big Time & Show Time
+      </div>
+
+      <div id="bannerTitle">
+        English League 25-26 Season's Best
+      </div>
+
+    </div>
+    
+    <div id="coinArea">
+
+  <span>🪙</span>
+
+  <span id="coinCount">
+    0
+  </span>
+
+  <button
+    id="coinPlus"
+    onclick="openShop()"
+  >
+    ＋
+  </button>
+
+</div>
+
+    <div id="boxCounter">
+      ボックスドロー 150/150
+    </div>
+
+  </div>
+
+  <div id="pickupArea">
+
+    <div class="pickupCard">
+
+      <div class="skillTop" id="skill1a"></div>
+      <div class="skillBottom" id="skill1b"></div>
+
+      <img id="pickup1">
+
+    </div>
+
+    <div class="pickupCard">
+
+      <div class="skillTop" id="skill2a"></div>
+      <div class="skillBottom" id="skill2b"></div>
+
+      <img id="pickup2">
+
+    </div>
+
+    <div class="pickupCard">
+
+      <div class="skillTop" id="skill3a"></div>
+      <div class="skillBottom" id="skill3b"></div>
+
+      <img id="pickup3">
+
+    </div>
+
+  </div>
+
+  <div id="bannerNotice">
+
+    ※表示されている総合値は到達しうる総合値であり、獲得時のものとは異なる場合があります。
+
+  </div>
+
+</div>
+  
+  <div id="bottomBar">
+
+  </button>
+
+  <button
+    class="menuBtn"
+    onclick="openMenu()"
+  >
+   ...
+  </button>
+
+    <button class="gacha1Btn" onclick="gacha1()">
+
+ 👤×1 | 🪙100　
+
+</button>
+  <button
+    class="coinBtn"
+    onclick="gacha10()"
+  >
+
+    👤×10 | 🪙900
+
+  </button>
+
+</div>
+
+  <!-- ガチャ選択 -->
+
+  <select id="gachaType">
+
+    <option value="epic150">
+      BigTime&Epic 150BOX
+    </option>
+
+    <option value="showtime150">
+      ShowTime 150BOX
+    </option>
+
+    <option value="bigshow150">
+      BigTime + ShowTime 150BOX
+    </option>
+
+    <option value="bigepic150">
+      BigTime + Epic 150BOX
+    </option>
+
+    <option value="epicshow200">
+      Epic + ShowTime 200BOX
+    </option>
+
+    <option value="bigepic250">
+      BigTime + ShowTime 250BOX
+    </option>
+
+  </select>
+
+  <!-- ガチャ変更 -->
+
+ <button
+  class="changeBtn"
+  onclick="openGachaMenu()"
+>
+  ガチャ変更
+</button>
+
+  <!-- 残数 -->
+
+  <button onclick="toggleStatus()">
+  👁️ 残数を見る
+</button>
+  
+  <div id="remainText"></div>
+
+<div id="status" style="display:none;"></div>
+
+  <!-- ガチャ -->
+
+
+    
+  
+
+  <!-- リセット -->
+
+ 
+
+  <!-- 演出動画 -->
+
+  <div id="animation"></div>
+
+  <!-- 結果表示 -->
+
+  <div id="result"></div>
+
+</div>
+
+<div id="confirmModal" class="modal">
+
+  <div class="modalBox">
+
+    <h2>支払い確認</h2>
+
+    <p>
+      eFootball™コインを消費して
+      選手10名を獲得します。
+    </p>
+
+    <p>
+      このスペシャル選手リストを
+      実行しますか？
+    </p>
+
+    <button
+      class="coinButton"
+      onclick="startConfirmGacha()"
+    >
+      🪙 900
+    </button>
+
+    <button
+      class="cancelButton"
+      onclick="closeModal()"
+    >
+      キャンセル
+    </button>
+
+  </div>
+
+</div>
+
+<div id="singleConfirmModal" class="modal">
+
+  <div class="modalBox">
+
+    <h2>支払い確認</h2>
+
+    <p>
+      eFootball™コインを消費して
+      選手1名を獲得します。
+    </p>
+
+    <p>
+      このスペシャル選手リストを
+      実行しますか？
+    </p>
+
+    <button
+      class="coinButton"
+      onclick="startSingleConfirmGacha()"
+    >
+      🪙 100
+    </button>
+
+    <button
+      class="cancelButton"
+      onclick="closeSingleModal()"
+    >
+      キャンセル
+    </button>
+
+  </div>
+
+</div>
+
+<div id="menuPopup" class="menuPopup">
+
+  <div class="menuPanel">
+
+    <h2>アクション</h2>
+
+    <button
+      class="actionBtn"
+      onclick="alert('未実装')"
+    >
+      詳細
+    </button>
+
+    <button
+      class="resetBtn"
+      onclick="resetBox()"
+    >
+      リセット
+    </button>
+
+    <button
+      class="cancelBtn"
+      onclick="closeMenu()"
+    >
+      キャンセル
+    </button>
+
+  </div>
+
+</div>
+
+<div
+  id="gachaMenu"
+  class="menuPopup"
+>
+
+  <div class="menuPanel">
+
+    <h2>ガチャ変更</h2>
+
+    <button
+      class="actionBtn"
+      onclick="selectGacha('epic150')"
+    >
+      BigTime&Epic 150BOX
+    </button>
+
+    <button
+      class="actionBtn"
+      onclick="selectGacha('showtime150')"
+    >
+      ShowTime 150BOX
+    </button>
+
+    <button
+      class="actionBtn"
+      onclick="selectGacha('bigshow150')"
+    >
+      BigTime + ShowTime 150BOX
+    </button>
+
+    <button
+      class="actionBtn"
+      onclick="selectGacha('bigepic150')"
+    >
+      Epic(月曜) 150BOX
+    </button>
+
+    <button
+      class="actionBtn"
+      onclick="selectGacha('epicshow200')"
+    >
+      Epic + ShowTime 200BOX
+    </button>
+
+    <button
+      class="actionBtn"
+      onclick="selectGacha('bigepic250')"
+    >
+      BigTime + ShowTime 250BOX
+    </button>
+
+    <button
+      class="cancelBtn"
+      onclick="closeGachaMenu()"
+    >
+      キャンセル
+    </button>
+
+  </div>
+
+</div>
+
+<div
+id="shopModal"
+class="modal"
+style="display:none;"
+>
+
+<div class="shopPanel">
+
+  <h2>コイン購入</h2>
+
+<div class="shopGrid">
+
+  <button class="shopBtn" onclick="buyCoins(130)">
+    <div class="coinAmount">🪙130</div>
+    <div class="coinPrice">¥160</div>
+  </button>
+
+  <button class="shopBtn" onclick="buyCoins(300)">
+    <div class="coinAmount">🪙300</div>
+    <div class="coinPrice">¥360</div>
+  </button>
+
+  <button class="shopBtn" onclick="buyCoins(550)">
+    <div class="coinAmount">🪙550</div>
+    <div class="coinPrice">¥650</div>
+  </button>
+
+  <button class="shopBtn" onclick="buyCoins(750)">
+    <div class="coinAmount">🪙750</div>
+    <div class="coinPrice">¥880</div>
+  </button>
+
+  <button class="shopBtn" onclick="buyCoins(1040)">
+    <div class="coinAmount">🪙1040</div>
+    <div class="coinPrice">¥1,200</div>
+  </button>
+
+  <button class="shopBtn" onclick="buyCoins(2130)">
+    <div class="coinAmount">🪙2130</div>
+    <div class="coinPrice">¥2,400</div>
+  </button>
+
+  <button class="shopBtn" onclick="buyCoins(3250)">
+    <div class="coinAmount">🪙3250</div>
+    <div class="coinPrice">¥3,600</div>
+  </button>
+
+  <button class="shopBtn" onclick="buyCoins(5700)">
+    <div class="coinAmount">🪙5700</div>
+    <div class="coinPrice">¥6,000</div>
+  </button>
+
+  <button class="shopBtn large" onclick="buyCoins(12800)">
+    <div class="coinAmount">🪙12800</div>
+    <div class="coinPrice">¥12,800</div>
+  </button>
+
+  <button class="shopBtn closeBtn" onclick="closeShop()">
+    閉じる
+  </button>
+
+</div>
+    <script src='https://npmcdn.com/react@15.3.0/dist/react.min.js'></script>
+<script src='https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js'></script><script  src="./script.js"></script>
+
+  </body>
+  
+</html>
 
