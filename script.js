@@ -190,7 +190,7 @@ function createBox(type) {
         "BigTime&ShowTime";
 
         bannerTitle =
-        "Big Time & Show Time:European Club Championship 25-26 Season's Best";
+        "Victory Drivers 2026";
         bannerImages = [
 
         "https://files.catbox.moe/efurg6.gif",
