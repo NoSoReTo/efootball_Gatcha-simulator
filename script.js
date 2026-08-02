@@ -83,34 +83,35 @@ function createBox(type) {
     maxBox = 150;
 
     addPlayer(
-    "ロナウジーニョ ガウーショ",
-    "BigTime",
-    "https://files.catbox.moe/4u0twi.gif");
+        "マルセル デサイー",
+        "BigTime",
+        "https://files.catbox.moe/lmjr2h.gif");
 
 
-    addPlayer(
-    "カカ",
-    "Epic",
-    "https://files.catbox.moe/l4o2su.gif");
+        addPlayer(
+        "パトリック ヴィエラ",
+        "Epic",
+        "https://files.catbox.moe/qgvi4p.gif");
 
 
-    addPlayer(
-    "カフー",
-    "Epic",
-    "https://files.catbox.moe/0fecv7.gif");
+        addPlayer(
+        "リリアン テュラム",
+        "Epic",
+        "https://files.catbox.moe/bxvrcp.gif");
     bannerType =
     "BigTime&Epic";
 
     bannerTitle =
-    "Brazil 2002";
+    "France 1998";
     bannerImages = [
 
-    "https://files.catbox.moe/4u0twi.gif",
+    "https://files.catbox.moe/lmjr2h.gif",
 
-    "https://files.catbox.moe/l4o2su.gif",
+"https://files.catbox.moe/qgvi4p.gif",
 
-    "https://files.catbox.moe/0fecv7.gif"];
+"https://files.catbox.moe/bxvrcp.gif"
 
+];
 
 
     addHighlights(8);
