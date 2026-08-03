@@ -203,8 +203,8 @@ function createBox(type) {
 
 ];
 
-      /* BigTime + ShowTime2 150 */else 
-      if (type === "bigshow2 150") {
+      /* BigTime + ShowTime2 150 */
+else if (type === "bigshow2 150") {
 
     maxBox = 150;
 
@@ -227,7 +227,7 @@ function createBox(type) {
 
     bannerType = "BigTime & ShowTime";
 
-    bannerTitle = "Pressure  -Proof 2026";
+    bannerTitle = "Pressure-Proof 2026";
 
     bannerImages = [
 
@@ -244,14 +244,6 @@ function createBox(type) {
     addStandards(139);
 
 }
-
-
-        addHighlights(8);
-
-        addStandards(139);
-
-
-      }
       /* BigTime + Epic 150 */else
 
         if (type === "bigepic150") {
