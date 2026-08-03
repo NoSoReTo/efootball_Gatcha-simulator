@@ -632,3 +632,43 @@ function spendCoins(cost) {
   document.getElementById("coinCount").innerHTML = coins;
   return true;
 }
+
+// 1. 各音声ファイルのURLを設定
+const soundEffects = {
+    showtime: new Audio('https://raw.githubusercontent.com/NoSoReTo/efootball_Gatcha-simulator/refs/heads/main/ShowTime.mp3'),
+    epic: new Audio('https://raw.githubusercontent.com/NoSoReTo/efootball_Gatcha-simulator/refs/heads/main/Epic.mp3'),
+    bigtime: new Audio('https://raw.githubusercontent.com/NoSoReTo/efootball_Gatcha-simulator/refs/heads/main/BigTime.mp3'),
+    double: new Audio('https://raw.githubusercontent.com/NoSoReTo/efootball_Gatcha-simulator/refs/heads/main/double.mp3')
+};
+
+// 音量の設定（1.0が最大、0.5で半分）
+Object.values(soundEffects).forEach(audio => {
+    audio.volume = 1.0; 
+});
+
+/**
+ * ガチャの演出音声と動画を再生する関数
+ * @param {string} type - 'showtime' | 'epic' | 'bigtime'
+ * @param {boolean} isDouble - 2枚引きかどうか (true / false)
+ */
+function playGacha演出(type, isDouble) {
+    // 連続再生で音が重ならないように一度すべて止めてリセット
+    Object.values(soundEffects).forEach(audio => {
+        audio.pause();
+        audio.currentTime = 0;
+    });
+
+    // 2枚引きの判定を優先し、それ以外はレアリティ別の音声を再生
+    if (isDouble && soundEffects.double) {
+        soundEffects.double.play().catch(error => {
+            console.log("音声の自動再生がブロックされました:", error);
+        });
+    } else if (soundEffects[type]) {
+        soundEffects[type].play().catch(error => {
+            console.log("音声の自動再生がブロックされました:", error);
+        });
+    }
+
+    // --- ここに従来の動画再生（video.play()など）の処理を記述します ---
+}
+
