@@ -203,6 +203,47 @@ function createBox(type) {
 
 ];
 
+      /* BigTime + ShowTime2 150 */else 
+      if (type === "bigshow2 150") {
+
+    maxBox = 150;
+
+        addPlayer(
+        "ジュード ベリンガム",
+        "BigTime",
+        "https://files.catbox.moe/2uyobp.gif");
+
+
+        addPlayer(
+        "マイケル オリーセ",
+        "ShowTime",
+        "https://files.catbox.moe/9fnr53.gif");
+
+
+        addPlayer(
+        "アユブ ブアディ",
+        "ShowTime",
+        "https://files.catbox.moe/1mslz3.gif");
+
+    bannerType = "BigTime & ShowTime";
+
+    bannerTitle = "Pressure  -Proof 2026";
+
+    bannerImages = [
+
+      "https://files.catbox.moe/2uyobp.gif",
+
+      "https://files.catbox.moe/9fnr53.gif",
+
+      "https://files.catbox.moe/1mslz3.gif"
+
+    ];
+
+    addHighlights(8);
+
+    addStandards(139);
+
+}
 
 
         addHighlights(8);
