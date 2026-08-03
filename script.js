@@ -369,8 +369,9 @@ function playAnimation(normalType, doubleRare, resultHTML) {
     return;
   }
 
+  // ▼ muted を追加
   animation.innerHTML = `
-    <video id="normalVideo" autoplay playsinline>
+    <video id="normalVideo" autoplay muted playsinline>
       <source src="${normalVideo}" type="video/mp4">
     </video>
   `;
@@ -379,8 +380,9 @@ function playAnimation(normalType, doubleRare, resultHTML) {
 
   video.onended = function () {
     if (doubleVideo !== "") {
+      // ▼ muted を追加
       animation.innerHTML = `
-        <video id="doubleVideo" autoplay playsinline>
+        <video id="doubleVideo" autoplay muted playsinline>
           <source src="${doubleVideo}" type="video/mp4">
         </video>
       `;
