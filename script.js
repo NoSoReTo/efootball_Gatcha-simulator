@@ -1,4 +1,4 @@
-let box = [];
+ let box = [];
 let coins = 0;
 let maxBox = 150;
 let bannerImages = [];
@@ -342,7 +342,7 @@ function updateStatus() {
 }
 
 /* =========================
-   演出（動画の音声をそのまま鳴らす）
+   演出
 ========================= */
 
 function playAnimation(normalType, doubleRare, resultHTML) {
@@ -369,7 +369,6 @@ function playAnimation(normalType, doubleRare, resultHTML) {
     return;
   }
 
-  // ▼ mutedを外し、Androidでも音声つきでスムーズに再生させるための設定
   animation.innerHTML = `
     <video id="normalVideo" autoplay playsinline>
       <source src="${normalVideo}" type="video/mp4">
@@ -378,9 +377,7 @@ function playAnimation(normalType, doubleRare, resultHTML) {
 
   let video = document.getElementById("normalVideo");
 
-  // Android等で確実に音声を有効化するための強制プレイ処理
   video.play().catch(error => {
-    console.log("自動再生がブロックされたため、ミュートでフォールバックします", error);
     video.muted = true;
     video.play();
   });
@@ -598,6 +595,48 @@ function closeMenu() {
   document.getElementById("menuPopup").style.display = "none";
 }
 
-### この修正のポイント
-* **Android対策の維持**: 単に `muted` を消すだけでなく、`.play()` がブラウザのポリシーで万が一ブロックされた場合のみ自動でミュートにフォールバック（安全に無音再生へ切り替え）する仕組みを入れているため、Android端末でエラーになって画面が止まるのを防いでいます。
-* **ズレ・被りの解消**: 音声ファイルを別途JavaScriptで鳴らしていた処理を完全に排除し、動画ファイル自体に音声を含める方式に戻したため、ラグが起きず、2枚引きの時も「演出動画の順番通り（1本目が終わってから2本目）」に綺麗に音声が流れるようになります。
+function openGachaMenu() {
+  document.getElementById("gachaMenu").style.display = "flex";
+}
+
+function closeGachaMenu() {
+  document.getElementById("gachaMenu").style.display = "none";
+}
+
+function selectGacha(type) {
+  document.getElementById("gachaType").value = type;
+  changeGacha();
+  closeGachaMenu();
+}
+
+function updateBannerImages() {
+  document.getElementById("bannerType").innerHTML = bannerType;
+  document.getElementById("bannerTitle").innerHTML = bannerTitle;
+  document.getElementById("pickup1").src = bannerImages[0];
+  document.getElementById("pickup2").src = bannerImages[1];
+  document.getElementById("pickup3").src = bannerImages[2];
+}
+
+function openShop() {
+  document.getElementById("shopModal").style.display = "flex";
+}
+
+function closeShop() {
+  document.getElementById("shopModal").style.display = "none";
+}
+
+function buyCoins(amount) {
+  coins += amount;
+  document.getElementById("coinCount").innerHTML = coins;
+  closeShop();
+}
+
+function spendCoins(cost) {
+  if (coins < cost) {
+    alert("コインが不足しています");
+    return false;
+  }
+  coins -= cost;
+  document.getElementById("coinCount").innerHTML = coins;
+  return true;
+}
