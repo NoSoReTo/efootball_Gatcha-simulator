@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <title>eFootball Gatcha ver.0.4.0</title>
     <link rel="stylesheet" href="./style.css">
-　　<meta name="viewport" content="width=device-width, initial-scale=1.0">
- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2684791825120505"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2684791825120505"
      crossorigin="anonymous"></script>
   </head>
     
@@ -93,30 +93,25 @@
   
   <div id="bottomBar">
 
-  </button>
-
-  <button
-    class="menuBtn"
-    onclick="openMenu()"
-  >
-   ...
-  </button>
+    <button
+      class="menuBtn"
+      onclick="openMenu()"
+    >
+     ...
+    </button>
 
     <button class="gacha1Btn" onclick="gacha1()">
+      👤×1 | 🪙100　
+    </button>
 
- 👤×1 | 🪙100　
+    <button
+      class="coinBtn"
+      onclick="gacha10()"
+    >
+      👤×10 | 🪙900
+    </button>
 
-</button>
-  <button
-    class="coinBtn"
-    onclick="gacha10()"
-  >
-
-    👤×10 | 🪙900
-
-  </button>
-
-</div>
+  </div>
 
   <!-- ガチャ選択 -->
 
@@ -134,9 +129,9 @@
       BigTime + ShowTime 150BOX
     </option>
 
-    <option value="bigshow2 150">
-  BigTime & ShowTime2 150BOX
-　　　</option>
+    <option value="bigshow2_150">
+      BigTime & ShowTime2 150BOX
+    </option>
 
     <option value="bigepic150">
       BigTime + Epic 150BOX
@@ -154,37 +149,27 @@
 
   <!-- ガチャ変更 -->
 
- <button
-  class="changeBtn"
-  onclick="openGachaMenu()"
->
-  ガチャ変更
-</button>
+  <button
+    class="changeBtn"
+    onclick="openGachaMenu()"
+  >
+    ガチャ変更
+  </button>
 
   <!-- 残数 -->
 
   <button onclick="toggleStatus()">
-  👁️ 残数を見る
-</button>
+    👁️ 残数を見る
+  </button>
   
   <div id="remainText"></div>
 
-<div id="status" style="display:none;"></div>
+  <div id="status" style="display:none;"></div>
 
-    <!-- 開発者支援・特典ボタン -->
-<a href="support.html" class="supportLinkBtn">
+  <!-- 開発者支援・特典ボタン -->
+  <a href="support.html" class="supportLinkBtn">
     ☕ 開発者を支援する / 特典について
   </a>
-
-  <!-- ガチャ -->
-
-
-    
-  
-
-  <!-- リセット -->
-
- 
 
   <!-- 演出動画 -->
 
@@ -325,12 +310,12 @@
       BigTime + ShowTime 150BOX
     </button>
 
-　　<button
-  class="actionBtn"
-  onclick="selectGacha('bigshow2 150')"
->
-  BigTime & ShowTime2 150BOX
-</button>
+    <button
+      class="actionBtn"
+      onclick="selectGacha('bigshow2_150')"
+    >
+      BigTime & ShowTime2 150BOX
+    </button>
     
     <button
       class="actionBtn"
@@ -365,71 +350,74 @@
 </div>
 
 <div
-id="shopModal"
-class="modal"
-style="display:none;"
+  id="shopModal"
+  class="modal"
+  style="display:none;"
 >
 
-<div class="shopPanel">
+  <div class="shopPanel">
 
-  <h2>コイン購入</h2>
+    <h2>コイン購入</h2>
 
-<div class="shopGrid">
+    <div class="shopGrid">
 
-  <button class="shopBtn" onclick="buyCoins(130)">
-    <div class="coinAmount">🪙130</div>
-    <div class="coinPrice">¥160</div>
-  </button>
+      <button class="shopBtn" onclick="buyCoins(130)">
+        <div class="coinAmount">🪙130</div>
+        <div class="coinPrice">¥160</div>
+      </button>
 
-  <button class="shopBtn" onclick="buyCoins(300)">
-    <div class="coinAmount">🪙300</div>
-    <div class="coinPrice">¥360</div>
-  </button>
+      <button class="shopBtn" onclick="buyCoins(300)">
+        <div class="coinAmount">🪙300</div>
+        <div class="coinPrice">¥360</div>
+      </button>
 
-  <button class="shopBtn" onclick="buyCoins(550)">
-    <div class="coinAmount">🪙550</div>
-    <div class="coinPrice">¥650</div>
-  </button>
+      <button class="shopBtn" onclick="buyCoins(550)">
+        <div class="coinAmount">🪙550</div>
+        <div class="coinPrice">¥650</div>
+      </button>
 
-  <button class="shopBtn" onclick="buyCoins(750)">
-    <div class="coinAmount">🪙750</div>
-    <div class="coinPrice">¥880</div>
-  </button>
+      <button class="shopBtn" onclick="buyCoins(750)">
+        <div class="coinAmount">🪙750</div>
+        <div class="coinPrice">¥880</div>
+      </button>
 
-  <button class="shopBtn" onclick="buyCoins(1040)">
-    <div class="coinAmount">🪙1040</div>
-    <div class="coinPrice">¥1,200</div>
-  </button>
+      <button class="shopBtn" onclick="buyCoins(1040)">
+        <div class="coinAmount">🪙1040</div>
+        <div class="coinPrice">¥1,200</div>
+      </button>
 
-  <button class="shopBtn" onclick="buyCoins(2130)">
-    <div class="coinAmount">🪙2130</div>
-    <div class="coinPrice">¥2,400</div>
-  </button>
+      <button class="shopBtn" onclick="buyCoins(2130)">
+        <div class="coinAmount">🪙2130</div>
+        <div class="coinPrice">¥2,400</div>
+      </button>
 
-  <button class="shopBtn" onclick="buyCoins(3250)">
-    <div class="coinAmount">🪙3250</div>
-    <div class="coinPrice">¥3,600</div>
-  </button>
+      <button class="shopBtn" onclick="buyCoins(3250)">
+        <div class="coinAmount">🪙3250</div>
+        <div class="coinPrice">¥3,600</div>
+      </button>
 
-  <button class="shopBtn" onclick="buyCoins(5700)">
-    <div class="coinAmount">🪙5700</div>
-    <div class="coinPrice">¥6,000</div>
-  </button>
+      <button class="shopBtn" onclick="buyCoins(5700)">
+        <div class="coinAmount">🪙5700</div>
+        <div class="coinPrice">¥6,000</div>
+      </button>
 
-  <button class="shopBtn large" onclick="buyCoins(12800)">
-    <div class="coinAmount">🪙12800</div>
-    <div class="coinPrice">¥12,800</div>
-  </button>
+      <button class="shopBtn large" onclick="buyCoins(12800)">
+        <div class="coinAmount">🪙12800</div>
+        <div class="coinPrice">¥12,800</div>
+      </button>
 
-  <button class="shopBtn closeBtn" onclick="closeShop()">
-    閉じる
-  </button>
+      <button class="shopBtn closeBtn" onclick="closeShop()">
+        閉じる
+      </button>
 
+    </div>
+
+  </div>
 </div>
-    <script src='https://npmcdn.com/react@15.3.0/dist/react.min.js'></script>
-<script src='https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js'></script><script  src="./script.js"></script>
 
-  </body>
-  
+<script src='https://npmcdn.com/react@15.3.0/dist/react.min.js'></script>
+<script src='https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js'></script>
+<script src="./script.js"></script>
+
+</body>
 </html>
-
