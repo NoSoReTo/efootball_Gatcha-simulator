@@ -1,40 +1,91 @@
-<!-- 遊び方モーダル -->
-<div id="helpModal" class="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); justify-content: center; align-items: center; z-index: 1000;">
-  <div class="modal-content" style="background: #222; color: #fff; padding: 25px; border-radius: 12px; width: 90%; max-width: 450px; max-height: 85vh; overflow-y: auto; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
-    <h2 style="text-align: center; margin-bottom: 20px; font-size: 1.2rem; border-bottom: 2px solid #444; padding-bottom: 10px;">📖 ガチャシミュレーターの遊び方</h2>
-    
-    <div style="font-size: 0.9rem; line-height: 1.6; display: flex; flex-direction: column; gap: 15px;">
-      <div>
-        <strong>1. コインの追加方法</strong><br>
-        ガチャ画面真ん中上部の<span style="color: #3b82f6; font-weight: bold;">「+」</span>ボタンから追加できます。<br>
-        <span style="color: #ef4444; font-weight: bold;">コイン追加は無料です。再現のため金額を書いていますが実際に決済は発生しません。</span>
-      </div>
+<!DOCTYPE html>
+<html lang="ja">
 
-      <div>
-        <strong>2. ガチャの回し方</strong><br>
-        コイン追加後に <span style="background: #333; padding: 2px 6px; border-radius: 4px; font-size: 0.85rem;">👤×1 | 🪙100</span> もしくは <span style="background: #333; padding: 2px 6px; border-radius: 4px; font-size: 0.85rem;">👤×10 | 🪙900</span> のボタンを押してください。
-      </div>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>遊び方 - e Gacha Simulator</title>
+<link rel="stylesheet" href="pages.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GYXZKHZQV9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-      <div>
-        <strong>3. ガチャ変更の方法</strong><br>
-        ガチャ変更ボタンを押し、任意のガチャを選んでその部分を押してください。<br>
-        <span style="font-size: 0.85rem; color: #aaa;">（※ラグが発生し、画像データの反映が遅れる場合があります。左上のガチャ名などが変わっていれば変更できています。）</span>
-      </div>
+  gtag('config', 'G-GYXZKHZQV9');
+</script>
+<style>
+  /* 遊び方ページ用の簡易スタイル調整（pages.cssに合せて微調整可能） */
+  .help-content {
+    text-align: left;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  .help-content div {
+    margin-bottom: 20px;
+  }
+  .help-content div:last-child {
+    margin-bottom: 0;
+  }
+  .backBtn {
+    display: inline-block;
+    background: #3b82f6;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+</style>
+</head>
 
-      <div>
-        <strong>4. 残数を見るボタン</strong><br>
-        こちらを押すと残りのレアリティとその数を見ることができます。
-      </div>
+<body>
 
-      <div>
-        <strong>5. ☕️開発者を支援する / 特典について</strong><br>
-        開発者を支援することができます。またオリジナルガチャの作成を承っております。
-      </div>
-    </div>
+<div class="container" style="max-width: 600px;">
 
-    <!-- ガチャ画面へボタン -->
-    <div style="text-align: center; margin-top: 25px;">
-      <button onclick="closeHelpModal()" style="background: #3b82f6; color: #fff; border: none; padding: 10px 30px; border-radius: 20px; font-weight: bold; cursor: pointer; font-size: 1rem;">ガチャ画面へ</button>
-    </div>
+<h1>📖 遊び方</h1>
+
+<div class="help-content">
+  <div>
+    <strong>1. コインの追加方法</strong><br>
+    ガチャ画面真ん中上部の<span style="color: #3b82f6; font-weight: bold;">「+」</span>ボタンから追加できます。<br>
+    <span style="color: #ef4444; font-weight: bold;">コイン追加は無料です。再現のため金額を書いていますが実際に決済は発生しません。</span>
+  </div>
+
+  <div>
+    <strong>2. ガチャの回し方</strong><br>
+    コイン追加後に <span style="background: #333; padding: 2px 6px; border-radius: 4px; font-size: 0.85rem;">👤×1 | 🪙100</span> もしくは <span style="background: #333; padding: 2px 6px; border-radius: 4px; font-size: 0.85rem;">👤×10 | 🪙900</span> のボタンを押してください。
+  </div>
+
+  <div>
+    <strong>3. ガチャ変更の方法</strong><br>
+    ガチャ変更ボタンを押し、任意のガチャを選んでその部分を押してください。<br>
+    <span style="font-size: 0.85rem; color: #aaa;">（※ラグが発生し、画像データの反映が遅れる場合があります。左上のガチャ名などが変わっていれば変更できています。）</span>
+  </div>
+
+  <div>
+    <strong>4. 残数を見るボタン</strong><br>
+    こちらを押すと残りのレアリティとその数を見ることができます。
+  </div>
+
+  <div>
+    <strong>5. ☕️開発者を支援する / 特典について</strong><br>
+    開発者を支援することができます。またオリジナルガチャの作成を承っております。
   </div>
 </div>
+
+<a class="backBtn" href="simulator.html">
+ガチャ画面へ
+</a>
+
+</div>
+
+</body>
+
+</html>
