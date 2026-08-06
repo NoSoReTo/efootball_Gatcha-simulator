@@ -363,7 +363,7 @@ button {
   color: red;
 }
 
-/* ▼ キャンセルボタンの余白とレイアウトを調整して隙間を解消 */
+/* ▼ キャンセルボタンの余白とレイアウト調整して隙間を解消 */
 .menuPanel .cancelBtn {
   width: 90%;
   margin: 15px auto;
