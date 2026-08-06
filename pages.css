@@ -1,4 +1,4 @@
-body {
+Body {
   background: #111;
   color: white;
   font-family: sans-serif;
@@ -363,15 +363,16 @@ button {
   color: red;
 }
 
-.cancelBtn {
+/* ▼ キャンセルボタンの余白とレイアウトを調整して隙間を解消 */
+.menuPanel .cancelBtn {
   width: 90%;
   margin: 15px auto;
   display: block;
   background: #d9e7f8;
   color: #0066ff;
   border: none;
-  padding: 15px;
-  font-size: 20px;
+  padding: 12px;
+  font-size: 18px;
   border-radius: 15px;
   flex-shrink: 0;
 }
