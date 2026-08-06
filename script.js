@@ -1,4 +1,4 @@
- let box = [];
+let box = [];
 let coins = 0;
 let maxBox = 150;
 let bannerImages = [];
@@ -312,14 +312,10 @@ function createBox(type) {
     addStandards(223);
   }
 
- 
-    /* ShowTime 50 /※
-
-      /* ShowTime Vosinha 50BOX */
+  /* ShowTime Vosinha 50BOX */
   else if (type === "vosinha50") {
     maxBox = 50;
 
-    // ヴォジーニャ（ShowTime 1枚）
     addPlayer(
       "ヴォジーニャ",
       "ShowTime",
@@ -330,15 +326,11 @@ function createBox(type) {
     bannerTitle = "Vosinha";
     bannerImages = [
       "https://files.catbox.moe/tnxchn.gif"
-      
     ];
 
-    // ハイライト3枚、スタンダード46枚（合計50BOX）
     addHighlights(3);
     addStandards(46);
   }
-
-
 
   updateBannerImages();
   updateStatus();
@@ -667,4 +659,48 @@ function spendCoins(cost) {
   coins -= cost;
   document.getElementById("coinCount").innerHTML = coins;
   return true;
+}
+
+/* =========================
+   お知らせ機能
+========================= */
+
+const newsData = [
+  {
+    date: "2026.08.06",
+    title: "✨ 新ガチャ「Vosinha 50BOX」追加！",
+    content: "ShowTime「ヴォジーニャ」が手に入る50BOXガチャを追加しました！ガチャ変更から選択できます。"
+  },
+  {
+    date: "2026.08.06",
+    title: "📖 遊び方ページを追加しました",
+    content: "コインの増やし方やガチャの仕様についてまとめた「遊び方」を公開しました。メニューからご確認いただけます。"
+  },
+  {
+    date: "2026.08.03",
+    title: "✨ BigTimeガチャ追加＆リリース！",
+    content: "当サイトをリリースしました！さらに、BigTime「ジュード ベリンガム」を含む150Boxガチャを追加しました。"
+  }
+];
+
+function openNewsModal() {
+  const container = document.getElementById("newsListContainer");
+  container.innerHTML = "";
+
+  newsData.forEach(item => {
+    container.innerHTML += `
+      <div style="border-bottom: 1px solid #444; padding-bottom: 12px; margin-bottom: 12px;">
+        <div style="font-size: 0.8rem; color: #aaa; margin-bottom: 4px;">${item.date}</div>
+        <div style="font-weight: bold; color: #fff; margin-bottom: 4px;">${item.title}</div>
+        <div style="color: #ddd; font-size: 0.85rem;">${item.content}</div>
+      </div>
+    `;
+  });
+
+  document.getElementById("newsModal").style.display = "flex";
+  closeMenu(); // メニューが開いていたらし閉じる
+}
+
+function closeNewsModal() {
+  document.getElementById("newsModal").style.display = "none";
 }
