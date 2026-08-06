@@ -312,6 +312,34 @@ function createBox(type) {
     addStandards(223);
   }
 
+ 
+    /* ShowTime 50 /※
+
+      /* ShowTime Vosinha 50BOX */
+  else if (type === "vosinha50") {
+    maxBox = 50;
+
+    // ヴォジーニャ（ShowTime 1枚）
+    addPlayer(
+      "ヴォジーニャ",
+      "ShowTime",
+      "https://files.catbox.moe/tnxchn.gif"
+    );
+
+    bannerType = "ShowTime";
+    bannerTitle = "Vosinha Special 50 Box";
+    bannerImages = [
+      "https://files.catbox.moe/tnxchn.gif"
+      
+    ];
+
+    // ハイライト3枚、スタンダード46枚（合計50BOX）
+    addHighlights(3);
+    addStandards(46);
+  }
+
+
+
   updateBannerImages();
   updateStatus();
 }
