@@ -327,7 +327,7 @@ function createBox(type) {
     );
 
     bannerType = "ShowTime";
-    bannerTitle = "Vosinha Special 50 Box";
+    bannerTitle = "Vosinha";
     bannerImages = [
       "https://files.catbox.moe/tnxchn.gif"
       
