@@ -678,7 +678,7 @@ const newsData = [
   },
   {
     date: "2026.08.03",
-    title: "✨ BigTimeガチャ追加＆リリース！",
+    title: "✨BigTimeガチャ追加＆リリース！",
     content: "当サイトをリリースしました！さらに、BigTime「ジュード ベリンガム」を含む150Boxガチャを追加しました。"
   }
 ];
