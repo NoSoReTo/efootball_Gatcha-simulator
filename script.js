@@ -65,36 +65,45 @@ function createBox(type) {
 
   /* Epic150 */
   if (type === "epic150") {
+
     maxBox = 150;
 
-    addPlayer(
-      "マルセル デサイー",
-      "BigTime",
-      "https://files.catbox.moe/lmjr2h.gif"
-    );
-    addPlayer(
-      "パトリック ヴィエラ",
-      "Epic",
-      "https://files.catbox.moe/qgvi4p.gif"
-    );
-    addPlayer(
-      "リリアン テュラム",
-      "Epic",
-      "https://files.catbox.moe/bxvrcp.gif"
-    );
+       addPlayer(
+        "エデン アザール",
+        "Epic",
+        "https://files.catbox.moe/368t8j.gif");
 
-    bannerType = "BigTime&Epic";
-    bannerTitle = "France 1998";
+
+        addPlayer(
+        "ジエゴ コスタ",
+        "Epic",
+        "https://files.catbox.moe/n925dt.gif");
+
+
+        addPlayer(
+        "ギャリー ケイヒル",
+        "Epic",
+        "https://files.catbox.moe/8nhx84.gif");
+
+    bannerType = "Epic";
+
+    bannerTitle = "Chelsea B";
+
     bannerImages = [
-      "https://files.catbox.moe/lmjr2h.gif",
-      "https://files.catbox.moe/qgvi4p.gif",
-      "https://files.catbox.moe/bxvrcp.gif"
+
+      "https://files.catbox.moe/368t8j.gif",
+
+      "https://files.catbox.moe/n925dt.gif",
+
+      "https://files.catbox.moe/8nhx84.gif"
+
     ];
 
     addHighlights(8);
+
     addStandards(139);
 
-  }
+}
   /* ShowTime150 */
   else if (type === "showtime150") {
     maxBox = 150;
