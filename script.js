@@ -373,11 +373,11 @@ function playAnimation(normalType, doubleRare, resultHTML) {
   let doubleVideo = "";
 
   if (normalType === "BigTime") {
-    normalVideo = "https://files.catbox.moe/hbz2gs.mp4";
+    normalVideo = "https://files.catbox.moe/5fy7bl.mp4";
   } else if (normalType === "Epic") {
-    normalVideo = "https://files.catbox.moe/9rhc5y.mp4";
+    normalVideo = "https://files.catbox.moe/461so9.mp4";
   } else if (normalType === "ShowTime") {
-    normalVideo = "https://files.catbox.moe/cuncbk.mov";
+    normalVideo = "https://files.catbox.moe/9cd44h.mp4";
   }
 
   if (doubleRare === true) {
