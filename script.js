@@ -675,7 +675,18 @@ function spendCoins(cost) {
 ========================= */
 
 const newsData = [
+
+   {
+    date: "2026.08.14",
+    title: "✳️ガチャ演出をefootball2027バージョンに刷新！",
+    content: "efootball2026→2027に伴い、ガチャ演出を最新にしました。※BigTime演出のサウンド、2枚引き演出は未実装"
+  },
   {
+    date: "2026.08.14",
+    title: "✨ 新ガチャ「Chelsea B」追加！",
+    content: "Epic「エデン アザール」が手に入る150BOXガチャを追加しました！ガチャ変更から選択できます。"
+  },   
+   {
     date: "2026.08.06",
     title: "✨ 新ガチャ「Vosinha 50BOX」追加！",
     content: "ShowTime「ヴォジーニャ」が手に入る50BOXガチャを追加しました！ガチャ変更から選択できます。"
