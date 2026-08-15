@@ -390,7 +390,7 @@ function playAnimation(normalType, doubleRare, resultHTML) {
   }
 
   if (doubleRare === true) {
-    doubleVideo = "https://files.catbox.moe/a36f8c.mp4";
+    doubleVideo = "https://files.catbox.moe/20yr65.mov";
   }
 
   if (normalVideo === "") {
