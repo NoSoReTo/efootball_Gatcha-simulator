@@ -106,34 +106,44 @@ function createBox(type) {
 }
   /* ShowTime150 */
   else if (type === "showtime150") {
+
     maxBox = 150;
 
-    addPlayer(
-      "ベンヤミン シェシュコ",
-      "ShowTime",
-      "https://files.catbox.moe/hbqknm.gif"
-    );
-    addPlayer(
-      "コビー メイヌー",
-      "ShowTime",
-      "https://files.catbox.moe/4pm3vf.gif"
-    );
-    addPlayer(
-      "ブライアン ムベウモ",
-      "ShowTime",
-      "https://files.catbox.moe/rxjyz6.gif"
-    );
+       addPlayer(
+        "モーガン ロジャーズ",
+        "ShowTime",
+        "https://files.catbox.moe/2k2zpk.gif");
+
+
+        addPlayer(
+        "エリオット アンダーソン",
+        "ShowTime",
+        "https://files.catbox.moe/chz26t.gif");
+
+
+        addPlayer(
+        "デンゼル ドゥンフリース",
+        "ShowTime",
+        "https://files.catbox.moe/fu9xqb.gif");
 
     bannerType = "ShowTime";
-    bannerTitle = "Manchester United";
+
+    bannerTitle = "Summer Transfer";
+
     bannerImages = [
-      "https://files.catbox.moe/rxjyz6.gif",
-      "https://files.catbox.moe/4pm3vf.gif",
-      "https://files.catbox.moe/hbqknm.gif"
+
+      "https://files.catbox.moe/2k2zpk.gif",
+
+      "https://files.catbox.moe/chz26t.gif",
+
+      "https://files.catbox.moe/fu9xqb.gif"
+
     ];
 
     addHighlights(8);
+
     addStandards(139);
+
 
   }
   /* BigTime + ShowTime 150 */
@@ -676,10 +686,15 @@ function spendCoins(cost) {
 
 const newsData = [
 
+  {
+    date: "2026.08.17",
+    title: "✨ 新ガチャ「Summer Transfer」追加！",
+    content: "ShowTime「モーガン ロジャーズ」が手に入る150BOXガチャを追加しました！ガチャ変更から選択できます。"
+  },
    {
     date: "2026.08.14",
     title: "✳️ガチャ演出を2027バージョンに刷新！",
-    content: "2026→2027に伴い、ガチャ演出を最新にしました。※BigTime演出のサウンド、2枚引き演出は未実装"
+    content: "2026→2027に伴い、ガチャ演出を最新にしました。※BigTime演出のサウンドは未実装"
   },
   {
     date: "2026.08.14",
