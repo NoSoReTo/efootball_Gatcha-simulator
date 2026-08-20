@@ -69,33 +69,33 @@ function createBox(type) {
     maxBox = 150;
 
        addPlayer(
-        "エデン アザール",
+        "ジェイ ジェイ オコチャ",
         "Epic",
-        "https://files.catbox.moe/368t8j.gif");
+        "https://files.catbox.moe/7eq6dv.gif");
 
 
         addPlayer(
-        "ジエゴ コスタ",
+        "ヌワンコ カヌ",
         "Epic",
-        "https://files.catbox.moe/n925dt.gif");
+        "https://files.catbox.moe/hn47hb.gif");
 
 
         addPlayer(
-        "ギャリー ケイヒル",
+        "ティジャニ ババンギダ",
         "Epic",
-        "https://files.catbox.moe/8nhx84.gif");
+        "https://files.catbox.moe/d8js6x.gif");
 
     bannerType = "Epic";
 
-    bannerTitle = "Chelsea B";
+    bannerTitle = "Nigeria";
 
     bannerImages = [
 
-      "https://files.catbox.moe/368t8j.gif",
+      "https://files.catbox.moe/7eq6dv.gif",
 
-      "https://files.catbox.moe/n925dt.gif",
+      "https://files.catbox.moe/hn47hb.gif",
 
-      "https://files.catbox.moe/8nhx84.gif"
+      "https://files.catbox.moe/d8js6x.gif"
 
     ];
 
