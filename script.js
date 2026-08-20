@@ -686,6 +686,11 @@ function spendCoins(cost) {
 
 const newsData = [
 
+　{
+    date: "2026.08.20",
+    title: "✨ 新ガチャ「Nigeria」追加！",
+    content: "Epic「ジェイ ジェイ オコチャ」が手に入る150BOXガチャを追加しました！ガチャ変更から選択できます。"
+  },
   {
     date: "2026.08.17",
     title: "✨ 新ガチャ「Summer Transfer」追加！",
